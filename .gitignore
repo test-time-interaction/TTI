@@ -9,7 +9,6 @@ scripts/wandb/
 tree.out
 *.pt
 *.out
-*.png
 *.pdf
 *.html
 
