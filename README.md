@@ -4,12 +4,12 @@ Thinking vs. Doing:  Agents that Reason by  Scaling Test-Time Interaction
 
 
 <p align="center">
-| <a href="https://test-time-interaction.github.io/"><b>Website</b></a> | <a href="https://arxiv.org/abs/"><b>Paper</b></a> | | <a href="https://huggingface.co/sjunhongs/tti_webvoyager"><b>WebVoyager Model</b></a> | | <a href="https://huggingface.co/sjunhongs/tti_webarena"><b>WebArena Model</b></a> |
+| <a href="https://test-time-interaction.github.io/"><b>Website</b></a> | <a href="https://arxiv.org/abs/"><b>Paper</b></a> | <a href="https://huggingface.co/sjunhongs/tti_webvoyager"><b>WebVoyager Model</b></a> | <a href="https://huggingface.co/sjunhongs/tti_webarena"><b>WebArena Model</b></a> |
 </p>
 
 ---
 
-Code repository for preprint "Thinking vs. Doing:  Agents that Reason by  Scaling Test-Time Interaction".
+Code repository for preprint "[Thinking vs. Doing:  Agents that Reason by  Scaling Test-Time Interaction]()".
 
 [Junhong Shen*](https://sjunhongshen.github.io/), [Hao Bai*](https://jackgethome.com), [Lunjun Zhang](https://lunjunzhang.github.io/),  [Yifei Zhou](https://<username>02.github.io/), [Amrith Setlur](https://ars22.github.io/), [Shengbang Tong](https://tsb0601.github.io/), [Diego Caples](https://www.linkedin.com/in/diegocaples/), [Nan Jiang](https://nanjiang.cs.illinois.edu/), [Tong Zhang](https://tongzhang-ml.org/), [Ameet Talwalkar](https://www.cs.cmu.edu/~atalwalk/), [Aviral Kumar](https://aviralkumar2907.github.io/)<br>
 CMU, Scribe, UIUC, U Toronto, UC Berkeley, The AGI Company, NYU
