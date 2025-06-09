@@ -1,0 +1,80 @@
+experiment_id: "webarena_train"
+
+defaults:
+  - default
+  - _self_
+
+save_path: '../logs/webarena/${experiment_id}' # the path to save the model checkpoint/trajectory_outputs
+
+# note that this is the training batch size
+batch_size: 4                # Micro-batch size per GPU
+grad_accum_steps: 2          # Number of gradient accumulation steps
+save_id: 0
+actor_epochs: 0 # number of epochs to update the actor
+epochs: 1
+lm_lr: 1e-6
+capacity: 1024000
+train_tasks: "../tasks/webarena_train_data.jsonl"
+test_tasks: "../tasks/webarena_test_data.jsonl"
+
+prompt_path: "prompts/webarena.json"
+evaluator_prompt_path: "prompts/evaluator_prompt.txt"
+
+parallel_option: "single"
+algorithm: "filteredbc"
+agent_name: "gemma-vllm"
+policy_lm:  "google/gemma-3-12b-it"
+max_new_tokens: 1024
+vllm_tensor_parallel_size: 4
+max_attached_imgs: 3
+
+eval_at_start: False
+eval_during_training: True
+online: True
+
+save_freq: 1
+eval_freq: 1
+
+rollout_size: 512
+actor_trajectories: 512
+safe_batch_size: 128
+
+env_config:
+  batch_size: 128
+  max_iter: 10
+  use_webarena_eval: True
+  verbose: False
+  use_rich_actree: True
+  num_containers_per_machine: 1
+  webarena_host: 
+      reddit: "ec2-98-81-119-107.compute-1.amazonaws.com" 
+      shopping_admin: "ec2-98-81-119-107.compute-1.amazonaws.com" 
+      gitlab: "ec2-98-81-119-107.compute-1.amazonaws.com"
+      map: "ec2-98-81-119-107.compute-1.amazonaws.com"
+      shopping: "ec2-98-81-119-107.compute-1.amazonaws.com"
+  webarena_subset: "reddit|shopping_admin|gitlab|shopping|map"
+  num_tasks_per_domain: [4126, 3376, 2986, 264, 390]
+  min_try: 1
+
+test_env_config:
+  batch_size: 128
+  max_iter: 30
+  use_webarena_eval: True
+  verbose: False
+  use_rich_actree: True
+  num_containers_per_machine: 1
+  webarena_host: 
+      reddit: "ec2-98-81-119-107.compute-1.amazonaws.com" 
+      shopping_admin: "ec2-98-81-119-107.compute-1.amazonaws.com" 
+      gitlab: "ec2-98-81-119-107.compute-1.amazonaws.com"
+      map: "ec2-98-81-119-107.compute-1.amazonaws.com"
+      shopping: "ec2-98-81-119-107.compute-1.amazonaws.com"
+  webarena_subset: "reddit|shopping_admin|gitlab|shopping|map"
+  min_try: 1
+  
+# wandb logging
+use_wandb: False
+wandb_key: ''
+entity_name: ''
+project_name: ''
+run_name: ${experiment_id}

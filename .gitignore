@@ -1,0 +1,46 @@
+logs/
+scripts/outputs/
+scripts/wandb/
+scripts/download/
+*.so
+*.egg-info/
+scripts/outputs/
+scripts/wandb/
+tree.out
+*.pt
+*.out
+*.png
+*.pdf
+*.html
+
+*.log
+*.pid
+
+# exclude any .wandb logs
+*.wandb
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+
+# Python cache files (common additions)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE files
+.vscode/
+.idea/

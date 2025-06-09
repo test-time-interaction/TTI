@@ -1,0 +1,37 @@
+checkpoint_path: null
+use_lora: True
+train_vision: False
+
+# Sampling
+temperature: 1.0
+
+offline_data_path: "" 
+algorithm: "filteredbc" 
+
+# agent
+agent_name: "gemma"
+capacity: 500000
+lm_lr: 2e-5
+grad_accum_steps: 1
+actor_trajectories: 1024 # number of trajectories randomly sampled to update the actor
+actor_epochs: 0 # number of epochs to update the actor
+epochs: 0
+
+rollout_size: 2
+batch_size: 2
+safe_batch_size: 1 # batch size while collecting roll-out data per GPU
+
+train_tasks: null # the file that contains tasks for the environment
+test_tasks: null
+
+parallel_option: "single"
+
+save_freq: 1
+eval_freq: 10
+eval_at_start: True
+online: True
+
+# wandb logging
+use_wandb: False
+
+
