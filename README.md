@@ -4,7 +4,7 @@ Thinking vs. Doing:  Agents that Reason by  Scaling Test-Time Interaction
 
 
 <p align="center">
-| <a href="https://test-time-interaction.github.io/"><b>Website</b></a> | <a href="https://arxiv.org/abs/"><b>Paper</b></a> | <a href="https://huggingface.co/sjunhongs/tti_webvoyager"><b>WebVoyager Model</b></a> | <a href="https://huggingface.co/sjunhongs/tti_webarena"><b>WebArena Model</b></a> |
+| <a href="https://test-time-interaction.github.io/"><b>Website</b></a> | <a href="https://arxiv.org/abs/2506.07976"><b>Paper</b></a> | <a href="https://huggingface.co/sjunhongs/tti_webvoyager"><b>WebVoyager Model</b></a> | <a href="https://huggingface.co/sjunhongs/tti_webarena"><b>WebArena Model</b></a> |
 </p>
 
 ---
@@ -98,7 +98,7 @@ Key parameters you may want to modify:
 - `batch_size`: Training batch size
 - `rollout_size`: Number of trajectories to collect
 - `vllm_tensor_parallel_size`: Number of GPUs for model parallelism
-- `min_try`: Number of attempts the agent is allowed to submit an answer. For example, if it's set to 2, we are allowing the model to re-check its answer (this is the inference-time interaction scaling strategy mentioned in the paper, see [here]() for implementation)
+- `min_try`: Number of attempts the agent is allowed to submit an answer. For example, if it's set to 2, we are allowing the model to re-check its answer (this is the inference-time interaction scaling strategy mentioned in the paper, see [here](https://github.com/test-time-interaction/TTI/blob/25504aa2d6a3da8da20c52dfe69af76deb1e113a/tti/models/prompt_processor.py#L205) for implementation)
 
 We use at least 4x NVIDIA H100 GPU for both training and evaluation.
 
@@ -175,9 +175,13 @@ cd scripts
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{shenbai2025tti,
-  title={},
-  author={},
-  year={2025}
+@misc{shenbai2025tti,
+      title={Thinking vs. Doing: Agents that Reason by Scaling Test-Time Interaction}, 
+      author={Junhong Shen and Hao Bai and Lunjun Zhang and Yifei Zhou and Amrith Setlur and Shengbang Tong and Diego Caples and Nan Jiang and Tong Zhang and Ameet Talwalkar and Aviral Kumar},
+      year={2025},
+      eprint={2506.07976},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2506.07976}, 
 }
 ```
